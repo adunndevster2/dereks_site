@@ -1,0 +1,74 @@
+<!Docutype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>State of Utah Home Page</title>
+		<link rel="stylesheet" href="D277 Task 2 CSS.css">
+		<script>
+			function checkEmail(event) {
+				let emailInput = document.getElementById("email").value;
+				let confEmailInput = document.getElementById("confEmail").value;
+				if (confEmailInput !== emailInput) {
+					alert("Email does not match");
+					event.preventDefault();
+					return false;
+				} else if (confEmailInput === emailInput) {
+					alert("Email matches");
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="container">
+				<div><img src="delicate arch.jpg" alt="Delicate Arch"></div>
+				<div><h1><span>Utah:</span> Where adventure calls</h1></div>
+			</div>
+		</header>
+		<nav>
+			<a href="D277 Task 2.html">Home</a>
+			<a href="D277 Task 2 Salt Lake.html">Salt Lake City</a>
+			<a href="D277 Task 2 St George.html">St. George</a>
+			<a href="D277 Task 2 Park City.html">Park City</a>
+		</nav>
+		<section>
+			<p>
+				Utah is a great state that is diverse in it’s environment. All 4 seasons can be experienced here and there is something for everyone; from skiing and snowboarding, to boating, to mountain biking. Come fine your passion in Utah.
+			</p>
+			<p id="feedbackPrompt">
+				If you have any feedback on the website, please submit your suggestions using the form below.
+			</p>
+			<form method="GET" id="feedbackForm" action="">
+				<p>
+					<label for="firstName">First Name:</label>
+					<input type="text" id="firstName" placeholder="Ex: John" required>
+				</p>
+				<p>
+					<label for="lastName">Last Name:</label>
+					<input type="text" id="lastName" placeholder="Ex: Doe" required>
+				</p>
+				<p>
+					<label for="email">Email:</label>
+					<input type="text" id="email" placeholder="Ex: johndoe@example.com" required>
+				</p>
+				<p>
+					<label for="confEmail">Confirm Email:</label>
+					<input type="text" id="confEmail" placeholder="Re-enter Email" required>
+				</p>
+				<p>
+					<label for="feedback">Feedback:</label>
+					<textarea id="feedback" name="feedback" placeholder="The website is great!" required></textarea>
+				</p>
+					<input type="submit" onclick="checkEmail()"value="Submit">
+				</p>
+			</form>
+		</section>
+		<aside>
+			<img src="mountains.jpg" alt="Mountains">
+			<img src="city.jpg" alt="City">
+			<img src="redrock.jpg" alt="Red Rock">
+		</aside>
+	</body>
+</html>	
+				

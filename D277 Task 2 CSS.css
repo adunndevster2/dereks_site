@@ -1,0 +1,77 @@
+body {
+	font-family: "Bauhaus 93", sans-serif;
+	color: black;
+	background-color: lightblue;
+	display: grid;
+	grid-template-columns: auto 25vw;
+	grid-template-rows: 25vh 10vh auto;
+	grid-template-areas:
+		"head head"
+		"nav aside"
+		"section aside";
+}
+header {
+	grid-area: head;
+	border: 5px solid black;
+}
+#container {
+	display: flex;
+}
+div img {
+	height: 20vh;
+	padding: 10px;
+	float: left;
+}
+h1 {
+	font-size: 100px;
+}
+h1 span {
+	font-size: 125px;
+}
+nav {
+	grid-area: nav;
+	font-size: 50px;
+	text-align: center;
+}
+a:hover {
+	color: yellow;
+}
+section {
+	font-family: "Copperplate", serif;
+	color: black;
+	grid-area: section;
+	font-size: 40px;
+	text-align: center;
+	width: 45vw;
+}
+table {
+	border: 5px solid black;
+	position: relative;
+	left: 50px;
+}
+.info {
+	background: linear-gradient(blue, white);
+	border-radius: 5pt;
+}
+.info2 {
+	background: radial-gradient(purple, yellow);
+}
+.olympics {
+	position: absolute;
+	float: right;
+	z-index: 0;
+	width: 15vw;
+}
+#feedbackPrompt {
+	font-size: 20px;
+}
+form {
+	font-size: 20px;
+}
+aside {
+	grid-area: aside;
+}
+aside img{
+	width: 20vw;
+	padding: 10px;
+}
